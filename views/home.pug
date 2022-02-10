@@ -1,0 +1,36 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title add user
+    body
+        .navbar.navbar-expand-lg.navbar-dark.bg-primary 
+            .container 
+                a.navbar-brand(href="") Social
+        .container 
+            .row 
+                .col-6.mx-auto 
+                    .card 
+                        .card-body 
+                            if messages.success
+                                p.alert.alert-success=messages.success 
+                            
+                            form(action="/signup",method="post") 
+                                .mb-3   
+                                    label(for="") name 
+                                    input.form-control(type="text",name="name") 
+                                .mb-3   
+                                    label(for="") contact 
+                                    input.form-control(type="text",name="contact") 
+                                .mb-3   
+                                    label(for="") email 
+                                    input.form-control(type="text",name="email") 
+                                .mb-3   
+                                    label(for="") password 
+                                    input.form-control(type="password",name="password") 
+                                .mb-3 
+                                    input.btn.btn-success.w-100
+                                
+
